@@ -29,7 +29,7 @@
 4.	Attach that role to EC2 instance
 5.	Modify S3 bucket policy to allow ‘EC2S3AccessRole’
 6.	Using S3 copy command, the file in S3 bucket is copied to the tmp folder of instance connect session.
-7.	From AWS CLI, the csv data is loaded into RDS database table using query LOAD DATA LOCAL INFILE: Update the Package Repository- sudo apt update -y (ubuntu)
+7.	From AWS CLI, the csv data is loaded into RDS database table using query LOAD DATA LOCAL INFILE.
 
 ### 4. OpenSearch
 
