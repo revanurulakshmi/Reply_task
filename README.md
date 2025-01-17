@@ -39,17 +39,21 @@
 4.	Modify Security Group of OpenSearch instance to allow https from nginx server
 5.	Modify Security Group of the Ec2 instance to allow http from my IP address
 6.	OpenSearch dashboard is now accessible
-7.	Created a new index in Stack Management -> Index patterns -> Create index pattern,
-that matches the field format of the data in exported files from dynamo DB
+7.	Created a new index in Stack Management -> Index patterns -> Create index pattern, that matches the field format of the data in exported files from Dynamo DB
 8.	Added data into the created index using POST command in Dev Tools Console in OpenSearch UI.
+
+But I am yet to find out a way to import data from the JSON files and load into the index. As I have committed to send by now, so sharing the task steps till here. 
+
 
 ### 5. EKS
 
-I am currently facing the issue while accessing EKS cluster via kubectl. I believe the issue is related to my IAM user not being added to aws-auth ConfigMap, which is required for me to interact with the Kubernetes cluster.
-Could you please kindly verify if my IAM user/role is listed in the aws-auth ConfigMap under the mapRoles/mapUsers section?
+1. Initially I faced Kubernetes RBAC issue and I was not able to access EKS cluster via kubectl. 
+2. IAM user/role is listed in the aws-auth ConfigMap under the mapRoles/mapUsers section in the template file in CloudFormation. I modified the template by adding the user and created a new stack from it, where I am able to access pods, nods etc.
+
+But I am yet to work on deploying the container. 
 
 ### 6. Generic AWS
-Create a process that performs the load from DynamoDB to MySQL or OpenSearch, periodically.
+I have to work on this yet and needed some more time. 
 
 
 
